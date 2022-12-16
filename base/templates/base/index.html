@@ -1,0 +1,53 @@
+{% extends 'base/main.html' %} {% load static %} {% block content %}
+
+<body>
+  <!-- NAVBAR -->
+  {% include 'base/navbar.html' %}
+  <!-- //NAVBAR -->
+
+  <!-- CONTENT WRAPPER -->
+  <div id="content-wrapper">
+    <!-- HOME -->
+    <section id="home" class="full-height px-lg-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-10">
+            <h1 class="display-4 fw-bold" data-aos="fade-up">
+              Я <span class="text-brand">веб-разработчик</span> с упором на
+              <span class="text-brand">бэкэнд</span>
+            </h1>
+            <p class="lead mt-2 mb-4" data-aos="fade-up" data-aos-delay="300">
+              Меня зовут Арби,и я создаю красивые и функциональные
+              веб-приложения
+            </p>
+            <div data-aos="fade-up" data-aos-delay="600">
+              <a href="{% static 'arby.pdf' %}" target="_blank" class="btn btn-brand me-3">Скачать резюме</a>
+              <a href="tel:+79226765252" class="link-custom"
+                >Позвонить: +7(922) 676 5252</a
+              >
+              <a> или написать в </a>
+              <a
+                href="https://api.whatsapp.com/send?phone=79226765252"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="link-custom"
+              >
+                Whatsapp</a
+              >
+              |
+              <a class="link-custom" href="https://t.me/ingarbi" target="_blank"> Telegram</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- //HOME -->
+
+    <!-- FOOTER -->
+
+    <!-- //FOOTER -->
+  </div>
+  <!-- //CONTENT WRAPPER -->
+
+  {% endblock content %}
+</body>

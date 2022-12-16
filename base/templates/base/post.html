@@ -1,0 +1,23 @@
+{% extends 'base/main.html' %} {% load static %} {% block content%}
+
+<div id="content-wrapper">
+  <section id="blog" class="full-height px-lg-5">
+    <div class="container">
+      <h1>{{post.headline}}</h1>
+      <div class="row align-item-center" style="width: 50%">
+        <img
+          src="{{post.thumbnail.url}}"
+          alt="Lights"
+          class="img-responsive"
+        />
+      </div>
+
+      <div>
+        <p>
+          {{post.body|safe}}
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+{% endblock content%}

@@ -1,0 +1,41 @@
+{% extends 'base/main.html' %}
+{% load static %}
+
+
+{% block content%}
+
+<!-- ABOUT -->
+
+<div id="content-wrapper">
+<section id="about" class="full-height px-lg-5">
+    <div class="container">
+      <div class="row pb-4" data-aos="fade-up">
+        <div class="col-lg-8">
+          <h1>Мой опыт и образование</h1>
+        </div>
+      </div>
+
+      {% for p in post %}
+      <div class="row gy-5">
+        
+          <div class="row gy-4">
+            <div class="col-12" data-aos="fade-up" data-aos-delay="600">
+              <div class="bg-base p-4 rounded-4 shadow-effect">
+                <h4>{{p.headline}}</h4>
+
+                <p class="mb-0">
+                  {{p.body|safe}}
+                </p>
+              </div>
+            </div>
+
+          </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+</div>
+  <!-- //ABOUT -->
+{% endblock content%}
+
+

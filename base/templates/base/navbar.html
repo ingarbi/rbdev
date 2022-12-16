@@ -1,0 +1,60 @@
+{% load static %}
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container flex-lg-column">
+    <a class="navbar-brand mx-lg-auto mb-lg-4" href="#">
+      <span class="h3 fw-bold d-block d-lg-none">Jon Carter</span>
+      <img
+        src="{% static 'images/person.jpg' %}"
+        class="d-none d-lg-block rounded-circle"
+        alt=""
+      />
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      
+      <ul class="navbar-nav ms-auto flex-lg-column text-lg-center">
+        <li><div class="container ">
+          <div class="row gy-4 justify-content-between">
+            <div class="col-auto">
+              <div class="social-icons ">
+                <a href="https://github.com/ingarbi" target="_blank"><i class="lab la-github"></i></a>
+                <a href="https://vk.com/a.sayid" target="_blank"><i class="lab la-vk"></i></a>
+                <a href="https://sunzha06.hh.ru/resume/0365e68aff0b3fa6ac0039ed1f70646f34616f" target="_blank"><i class="lab la-hire-a-helper"></i></a>
+              </div>
+            </div>
+          </div>
+        </div></li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'home' %}">Главная</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'profile' %}">Обо мне</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'posts' %}">Блог</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'contacts' %}">Контакты</a>
+        </li>
+        {% if request.user.is_authenticated %}
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'create_post' %}">Create Post</a>
+        </li>
+        {% endif %}
+      </ul>
+    </div>
+  </div>
+</nav>

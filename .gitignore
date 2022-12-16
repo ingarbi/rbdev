@@ -1,0 +1,9 @@
+logs/
+env/
+*.sqlite3 
+db.sqlite3
+staticfiles/
+
+local_settings.py
+prod_settings.py
+config/

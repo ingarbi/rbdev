@@ -1,0 +1,62 @@
+{% extends 'base/main.html' %} {% load static %} {% block content%}
+
+<div id="content-wrapper">
+    <!-- CONTACT -->
+    <section id="contact" class="full-height px-lg-5">
+        <div class="container">
+          <div class="row justify-content-center text-center">
+            <div class="col-lg-8 pb-4" data-aos="fade-up">
+              <h1>Что-то еще? Давай свяжемся</h1>
+            </div>
+  
+            <div class="col-lg-8" data-aos="fade-up" data-aos-delay="300">
+              <form
+                method="POST"
+                action="{% url 'send_email' %}"
+                class="row g-lg-3 gy-3"
+              >
+                {% csrf_token %}
+                <div class="form-group col-md-6">
+                  <input
+                    name="name"
+                    type="text"
+                    class="form-control"
+                    placeholder="Твое имя"
+                  />
+                </div>
+                <div class="form-group col-md-6">
+                  <input
+                    name="email"
+                    type="email"
+                    class="form-control"
+                    placeholder="Твой email"
+                  />
+                </div>
+                <div class="form-group col-12">
+                  <input
+                    name="subject"
+                    type="text"
+                    class="form-control"
+                    placeholder="Тема"
+                  />
+                </div>
+                <div class="form-group col-12">
+                  <textarea
+                    name="message"
+                    rows="4"
+                    class="form-control"
+                    placeholder="Твое сообщение"
+                  ></textarea>
+                </div>
+                <div class="form-group col-12 d-grid">
+                  <button type="submit" class="btn btn-brand">Отправь мне</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- //CONTACT -->
+  
+
+      {% endblock content%}
